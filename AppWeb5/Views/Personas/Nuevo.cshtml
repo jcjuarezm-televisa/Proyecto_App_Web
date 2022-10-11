@@ -1,0 +1,60 @@
+﻿@model AppWeb5.Models.ViewModels.PersonasViewModel
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Nuevo", "Personas", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @*<div>
+                @Html.LabelFor(d => d.id)
+                @Html.TextBoxFor(d => d.id, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.id, null, new { @class = "alert" })
+            </div>*@
+            <div>
+                @Html.LabelFor(d => d.nombre)
+                @Html.TextBoxFor(d => d.nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.nombre, null, new { @class = "alert" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Ap_Pat)
+                @Html.TextBoxFor(d => d.Ap_Pat, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Ap_Pat, null, new { @class = "alert" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Ap_Mat)
+                @Html.TextBoxFor(d => d.Ap_Mat, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Ap_Mat, null, new { @class = "alert" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Edad)
+                @Html.TextBoxFor(d => d.Edad, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Edad, null, new { @class = "alert" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Activo)
+                @Html.TextBoxFor(d => d.Activo, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Activo, null, new { @class = "alert" })
+            </div>
+            @*<div>
+                @Html.LabelFor(d => d.Create_at)
+                @Html.TextBoxFor(d => d.Create_at, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Create_at, null, new { @class = "alert" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Update_at)
+                @Html.TextBoxFor(d => d.Update_at, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Update_at, null, new { @class = "alert" })
+            </div>*@
+            <div style="text-align:right;">
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+
+        </div>
+
+    </div>
+
+}
